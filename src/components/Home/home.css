@@ -1,0 +1,22 @@
+
+@media only screen and (max-width: 320px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 768px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
+@media only screen and (min-width: 769px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
