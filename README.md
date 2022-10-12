@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Code Link
 
 This is code link: [https://github.com/programming-hero-web-course2/b6-quiz-crackerz-raHasan22]
+Live site Link: [https://jolly-trifle-180cc3.netlify.app/]
