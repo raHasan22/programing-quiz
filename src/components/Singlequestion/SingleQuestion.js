@@ -1,19 +1,18 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import './SingleQuestion.css';
 
 const SingleQuestion = ({oneQuestion}) => {
-    console.log(typeof(oneQuestion));
     const {id, question, options} = oneQuestion;
     return (
-        <div>
+        <div className='one-qs shadow'>
             <div>
-                Question: {question.slice(3,-4)} 
+                <h4>Question: {question.slice(3,-4)}</h4>
             </div>
-            <div>
-                <input type="radio" value={options[0]} name={id} /> {options[0]}
-                <input type="radio" value={options[1]} name={id} /> {options[1]}
-                <input type="radio" value={options[2]} name={id} /> {options[2]}
-                <input type="radio" value={options[3]} name={id} /> {options[3]}
+            <div className='answers'>
+                <input type="radio" value={options[0]} name={id} /> {options[0]} <br></br>
+                <input type="radio" value={options[1]} name={id} /> {options[1]} <br></br>
+                <input type="radio" value={options[2]} name={id} /> {options[2]} <br></br>
+                <input type="radio" value={options[3]} name={id} /> {options[3]? options[3]: 'None'}
             </div>
         </div>
     );
