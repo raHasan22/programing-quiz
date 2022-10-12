@@ -1,7 +1,7 @@
 import React from 'react';
 import './SingleQuestion.css';
 
-const SingleQuestion = ({oneQuestion, radioHandler}) => {
+const SingleQuestion = ({oneQuestion, radioHandler, theAnswer}) => {
     const {id, question, options, correctAnswer} = oneQuestion;
     return (
         <div className='one-qs shadow'>
@@ -13,6 +13,9 @@ const SingleQuestion = ({oneQuestion, radioHandler}) => {
                 <input type="radio" value={options[1]} name={id} onClick={()=> radioHandler(options[1], correctAnswer)} /> {options[1]} <br></br>
                 <input type="radio" value={options[2]} name={id} onClick={()=> radioHandler(options[2], correctAnswer)}/> {options[2]} <br></br>
                 <input type="radio" value={options[3]? options[3]:'None' } name={id} onClick={()=> radioHandler(options[3]? options[3]:'None', correctAnswer)}/> {options[3]? options[3]: 'None'}
+            </div>
+            <div className='my-3'>
+                <button className='btn btn-warning' onClick={()=> theAnswer(correctAnswer)}>See Correct Answer</button>
             </div>
         </div>
     );

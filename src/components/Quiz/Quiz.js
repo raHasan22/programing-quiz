@@ -8,13 +8,15 @@ const Quiz = () => {
     const {data} = quiz;
     const {questions} = data;
     const radioHandler = (value, value1) =>{
-        console.log(value, value1)
         if(value===value1){
             alert("Correct answer");
         }
         else{
             alert("Wrong answer");
         }
+    }
+    const theAnswer = (answer) => {
+        alert(answer);
     }
     return (
         <Container>
@@ -24,7 +26,8 @@ const Quiz = () => {
                 {questions.map(oneQuestion => <SingleQuestion
                 key={oneQuestion.id}
                 oneQuestion={oneQuestion}
-                radioHandler={radioHandler}   
+                radioHandler={radioHandler} 
+                theAnswer={theAnswer}  
                 ></SingleQuestion>)}
             </div>
         </div>
