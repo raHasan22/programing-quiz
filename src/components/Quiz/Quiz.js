@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import SingleQuestion from '../Singlequestion/SingleQuestion';
 
@@ -11,7 +10,10 @@ const Quiz = () => {
     const radioHandler = (value, value1) =>{
         console.log(value, value1)
         if(value===value1){
-            toast.success('Correct Answer');
+            alert("Correct answer");
+        }
+        else{
+            alert("Wrong answer");
         }
     }
     return (
